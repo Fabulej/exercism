@@ -1,0 +1,13 @@
+class Raindrops
+  def self.convert(number)
+    sounds = ""
+    sounds += "Pling" if number%3==0
+    sounds += "Plang" if number%5==0
+    sounds += "Plong" if number%7==0
+    sounds = number.to_s if sounds.empty?
+    return sounds
+  end
+end
+module BookKeeping
+  VERSION = 3
+end
