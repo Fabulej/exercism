@@ -1,12 +1,6 @@
 class Pangram
   def self.pangram?(phrase)
-    if (phrase.downcase.chars.uniq.count{|char| char=~ /[A-Za-z]/}) == 26
-      return true
-        puts "The sentence is a pangram!"
-    else
-      return false
-      "The sentence is NOT a pangram."
-    end
+    return true if (phrase.downcase.delete('^a-z').chars.uniq.count) == 26
   end
 end
 module BookKeeping
